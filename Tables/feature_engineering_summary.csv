@@ -1,0 +1,12 @@
+role,feature_group,columns
+feature,generation,14
+feature,graph,4
+feature,line_flow_history,23
+feature,load,10
+feature,operating_regime,3
+feature,other_numeric,3
+feature,temporal,10
+feature,topology,4
+metadata,metadata,3
+metadata,network_coordinates_metadata,4
+target_or_identifier,target_or_identifier,16

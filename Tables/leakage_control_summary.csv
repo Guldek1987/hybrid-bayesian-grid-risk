@@ -1,0 +1,6 @@
+risk,control
+Future target leakage,"Future line-flow targets are produced by group-wise forward shifts after sorting by suffix, line, and time."
+Threshold leakage,Risk thresholds and critical-line selection use training rows only.
+Temporal leakage,Lag and rolling features use shifted historical values only.
+External-test leakage,"Suffix group 4 is never used for fitting, calibration, feature selection, or ablation decisions."
+Test tuning,Only validation data are used for hyperparameter and decision-threshold selection.

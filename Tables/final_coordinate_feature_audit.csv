@@ -1,0 +1,5 @@
+column,role,feature_group,dtype,training_feature
+from_longitude,metadata,network_coordinates_metadata,float64,False
+from_latitude,metadata,network_coordinates_metadata,float64,False
+to_longitude,metadata,network_coordinates_metadata,float64,False
+to_latitude,metadata,network_coordinates_metadata,float64,False

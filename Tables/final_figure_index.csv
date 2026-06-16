@@ -1,0 +1,35 @@
+figure_file,title,description
+fig_01_data_coverage.png,Transmission Grid Data Coverage,Transmission Grid Data Coverage based on file_size_mb.
+fig_02_network_component_summary.png,Network Component Summary,Network Component Summary based on count.
+fig_03_raw_line_flow_distribution.png,Line-Flow Distribution,Raw line-flow distribution from the unified dataset.
+fig_04_line_selection_profile.png,Critical Line Selection Profile,Critical Line Selection Profile based on selection_score.
+fig_05_risk_label_distribution.png,Risk Label Distribution,Risk Label Distribution based on horizon.
+fig_06_graph_adjacency_matrix.png,Graph Adjacency Matrix,Adjacency matrix among selected lines.
+fig_07_normalized_feature_distribution.png,Normalized Feature Distribution,Standardized feature distribution excluding raw coordinates.
+fig_08_temporal_operating_regimes.png,Temporal Operating Regimes,Frequency of operating-regime flags by split.
+fig_09_baseline_model_ranking.png,Baseline Model Ranking,Baseline Model Ranking based on MAE.
+fig_10_sota_model_ranking.png,SOTA Model Ranking,SOTA Model Ranking based on MAE.
+fig_11_full_model_comparison_validation.png,Full Model Comparison on Validation,Full Model Comparison on Validation based on MAE.
+fig_12_full_model_comparison_external.png,Full Model Comparison on External Test,Full Model Comparison on External Test based on MAE.
+fig_13_forecasting_error_comparison.png,Forecasting Error Comparison,Forecasting Error Comparison based on RMSE.
+fig_14_risk_classification_comparison.png,Risk Classification Comparison,Risk Classification Comparison based on Macro-F1.
+fig_15_calibration_comparison.png,Calibration Comparison,Calibration Comparison based on Expected Calibration Error.
+fig_16_probabilistic_interval_quality.png,Probabilistic Interval Quality,Probabilistic Interval Quality based on interval coverage.
+fig_17_latency_throughput_comparison.png,Latency and Throughput Comparison,Latency and Throughput Comparison based on throughput_samples_per_second.
+fig_18_efficiency_quality_tradeoff.png,Efficiency-Quality Trade-off,Accuracy and error trade-off across trained models.
+fig_19_proposed_vs_best_baseline.png,Proposed Model vs Best Baseline,Proposed Model vs Best Baseline based on MAE.
+fig_20_proposed_vs_best_sota.png,Proposed Model vs Best SOTA,Proposed Model vs Best SOTA based on MAE.
+fig_21_ablation_performance_validation.png,Ablation Performance on Validation,Ablation Performance on Validation based on Macro-F1.
+fig_22_ablation_performance_external.png,Ablation Performance on External Test,Ablation Performance on External Test based on Macro-F1.
+fig_23_component_contribution_summary.png,Component Contribution Summary,Component Contribution Summary based on effect_on_Macro_F1.
+fig_24_error_reduction_by_operating_regime.png,Error Reduction by Operating Regime,Error Reduction by Operating Regime based on MAE.
+fig_25_high_risk_recall_false_negative.png,High-Risk Recall and False-Negative Reduction,High-Risk Recall and False-Negative Reduction based on Recall.
+fig_26_rolling_origin_validation_stability.png,Rolling-Origin Validation Stability,Rolling validation stability of B-TGPRF.
+fig_27_external_test_stability.png,External-Test Stability,External-Test Stability based on absolute_external_shift.
+fig_28_threshold_sensitivity.png,Threshold Sensitivity,Threshold Sensitivity based on Macro-F1.
+fig_29_horizon_sensitivity.png,Horizon Sensitivity,Horizon Sensitivity based on MAE.
+fig_30_grouped_permutation_importance.png,Grouped Permutation Importance,Grouped Permutation Importance based on MAE_increase.
+fig_31_uncertainty_vs_error.png,Uncertainty vs Error,Relationship between uncertainty and absolute error.
+fig_32_reliability_diagram.png,Reliability Diagram,External-test reliability curve for B-TGPRF.
+fig_33_critical_line_risk_profile.png,Critical Line Risk Profile,"Coordinate metadata is used only for final physical visualization, not model training."
+fig_34_final_model_ranking.png,Final Model Ranking,Final Model Ranking based on ranking_score.

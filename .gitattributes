@@ -1,0 +1,7 @@
+*.png binary
+*.pdf binary
+*.drawio text eol=lf
+*.md text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+*.ipynb text eol=lf

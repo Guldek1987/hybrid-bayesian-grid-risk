@@ -1,0 +1,14 @@
+component,count
+bus,4097.0
+branch,8375.0
+gen,815.0
+load,4097.0
+dcline,0.0
+storage,0.0
+switch,0.0
+shunt,0.0
+branch_rate_a_min,1.4
+branch_rate_a_median,4.9
+branch_rate_a_max,54.0
+generator_type_count,27.0
+country_count,26.0

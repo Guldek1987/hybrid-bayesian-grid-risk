@@ -1,0 +1,31 @@
+table_file,description,rows,columns
+final_required_artifact_check.csv,Required final input artifact check,8,4
+final_unified_dataset_summary.csv,Unified dataset summary,9,2
+final_coordinate_feature_audit.csv,Coordinate metadata audit,4,5
+final_validation_classification_metrics.csv,validation classification metrics for trained models,20,13
+final_validation_forecasting_metrics.csv,validation forecasting metrics for trained models,18,9
+final_validation_probabilistic_metrics.csv,validation probabilistic and calibration metrics,22,10
+final_test_classification_metrics.csv,test classification metrics for trained models,20,13
+final_test_forecasting_metrics.csv,test forecasting metrics for trained models,18,9
+final_test_probabilistic_metrics.csv,test probabilistic and calibration metrics,22,10
+final_external_classification_metrics.csv,external_test classification metrics for trained models,20,13
+final_external_forecasting_metrics.csv,external_test forecasting metrics for trained models,18,9
+final_external_probabilistic_metrics.csv,external_test probabilistic and calibration metrics,22,10
+final_latency_efficiency_metrics.csv,Training time and inference latency metrics,87,7
+final_model_complexity_metrics.csv,Model complexity and storage metrics,14,6
+final_efficiency_quality_tradeoff.csv,Efficiency-quality trade-off table,29,11
+final_ablation_validation_metrics.csv,Validation ablation metrics,10,33
+final_ablation_external_metrics.csv,External-test ablation metrics,10,33
+final_ablation_contribution_summary.csv,Ablation contribution summary,9,7
+rolling_origin_validation_summary.csv,Rolling-origin validation summary,5,8
+threshold_sensitivity_analysis.csv,Threshold sensitivity analysis,9,11
+horizon_sensitivity_analysis.csv,Horizon sensitivity analysis,9,10
+subgroup_metrics.csv,Subgroup metrics by operating regime and topology,27,11
+central_peripheral_line_metrics.csv,Central-line versus peripheral-line metrics,6,11
+high_risk_near_threshold_metrics.csv,High-risk and near-threshold metrics,6,11
+final_statistical_tests.csv,Paired statistical tests,4,9
+robustness_summary.csv,Robustness summary,3,5
+external_stability_summary.csv,External-test stability summary,18,7
+final_additional_experiments_summary.csv,Additional experiment summary,23,18
+grouped_permutation_importance.csv,Grouped permutation importance excluding coordinate metadata,8,5
+final_result_snapshot.csv,Final B-TGPRF result snapshot,3,12

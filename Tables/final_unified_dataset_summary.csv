@@ -1,0 +1,10 @@
+item,value
+Rows in unified modelling dataset,3484800
+Unique selected lines,100
+Unique scenario groups,4
+Train rows,1572300
+Validation rows,524100
+Test rows,517200
+External-test rows,871200
+Trainable feature columns,71
+Raw coordinate training features,0

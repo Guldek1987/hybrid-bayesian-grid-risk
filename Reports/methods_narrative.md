@@ -1,0 +1,3 @@
+# Methods Narrative
+
+The computational protocol constructs a leakage-safe unified transmission-grid modelling dataset, selects critical lines using training-only statistics, trains classical baselines, compact neural and graph-temporal SOTA-style models, and evaluates a single proposed B-TGPRF architecture. Raw geographic coordinates are not used as training features; they are retained only as metadata for physical visualization of selected lines. B-TGPRF integrates validation-selected point forecasting, temporal line-flow/load/generation dynamics, graph-neighborhood and topology-aware features, a Bayesian posterior-style risk layer, validation calibration, residual correction, conformal prediction intervals, and external-test stability analysis.

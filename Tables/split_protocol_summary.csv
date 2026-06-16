@@ -1,0 +1,5 @@
+partition,suffix_groups,time_rule,allowed_use
+train,2020 groups 1-3,first 60% within each group,"model fitting, line selection, train thresholds"
+validation,2020 groups 1-3,next 20% within each group,"hyperparameter selection, calibration, threshold selection"
+test,2020 groups 1-3,final 20% within each group,final internal evaluation only
+external_test,2020 group 4,all valid target times,external-like robustness evaluation only

@@ -1,0 +1,9 @@
+artifact,path,exists,size_mb
+download_manifest,Tables/download_manifest.csv,True,0.000614166259765625
+dataset_file_summary,Tables/dataset_file_summary.csv,True,0.0015125274658203125
+network_component_summary,Tables/network_component_summary.csv,True,0.0002117156982421875
+split_summary,Tables/split_summary.csv,True,0.00026035308837890625
+selected_lines_metadata,Data/Unified/selected_lines_metadata.csv,True,0.020232200622558594
+risk_label_distribution,Tables/risk_label_distribution.csv,True,0.0010118484497070312
+feature_dictionary,Data/Unified/feature_dictionary.csv,True,0.004387855529785156
+model_dataset,Data/Unified/unified_powergrid_modeling_dataset.parquet,True,612.0722503662109

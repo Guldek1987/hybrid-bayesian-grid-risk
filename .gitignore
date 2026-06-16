@@ -1,0 +1,24 @@
+.DS_Store
+._*
+.$*
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+.env
+.venv/
+venv/
+
+# Keep large reproducible data and binary outputs out of Git.
+Data/
+Models/
+*.parquet
+*.joblib
+*.zip
+Tables/*predictions*.csv
+Tables/sota_training_curves_long.csv
+
+# Do not publish word-processing files in this repository.
+*.doc
+*.docx

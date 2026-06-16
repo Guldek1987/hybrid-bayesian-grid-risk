@@ -1,0 +1,6 @@
+item,definition
+Primary objective,Probabilistic overload-risk forecasting and line-flow forecasting for selected critical transmission lines.
+Task A,"Overload risk classification using Normal, Warning, and Critical labels; binary Critical risk is used for calibrated probabilistic comparison."
+Task B,"Line-flow forecasting with point and probabilistic interval outputs for 1 h and 6 h horizons, with 24 h targets prepared when feasible."
+Research gap,"Most forecasting studies treat line-flow prediction, topology, uncertainty, calibration, and external-year or external-group robustness separately."
+Proposed contribution,"B-TGPRF integrates temporal dynamics, topology-aware graph features, Bayesian posterior risk estimation, conformal intervals, residual correction, and external testing."

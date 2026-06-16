@@ -1,0 +1,7 @@
+forecast_component,validation_weight
+HistGradientBoostingRegressor,0.48511294003114447
+ExtraTreesRegressor,0.30308814107755
+RandomForestRegressor,0.21179891889130553
+XGBoost Regressor,6.288878403900047e-17
+ElasticNet,4.9841314921507795e-17
+Ridge,2.887112698005775e-17

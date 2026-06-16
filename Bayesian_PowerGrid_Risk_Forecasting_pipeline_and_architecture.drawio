@@ -1,0 +1,330 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="2">
+  <diagram name="Page 1 - Data Preparation and Feature Engineering Pipeline" id="p1_diagram">
+    <mxGraphModel grid="0" page="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="2200" pageHeight="1240" math="1" shadow="0">
+      <root>
+        <mxCell id="p1_0" />
+        <mxCell id="p1_1" parent="p1_0" />
+        <mxCell id="p1_v3" parent="p1_1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=22;fontStyle=1;" value="Data Preparation and Feature Engineering Pipeline for Bayesian Temporal Graph Overload-Risk Forecasting" vertex="1">
+          <mxGeometry height="34" width="1465" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_v4" parent="p1_1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=18;fontStyle=1;" value="Coordinate-safe unified dataset construction, risk-label definition, feature engineering, and leakage-controlled splitting before model training" vertex="1">
+          <mxGeometry height="34" width="1472" x="43" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF3F8;strokeColor=#78A8C5;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="" vertex="1">
+          <mxGeometry height="370" width="397" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs_header" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF3F8;strokeColor=#78A8C5;strokeWidth=2;fontFamily=Times New Roman;fontSize=18;arcSize=8;shadow=0;fontStyle=1;" value="&lt;b&gt;Core Input Variables&lt;/b&gt;" vertex="1">
+          <mxGeometry height="46" width="398" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs_row_0" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Load observations&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;P&lt;sup&gt;load&lt;/sup&gt;&lt;sub&gt;i&lt;/sub&gt;(t): demand signals and load-ramp context.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="54" width="390" x="47" y="182" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs_row_1" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Generation observations&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;P&lt;sup&gt;gen&lt;/sup&gt;&lt;sub&gt;j&lt;/sub&gt;(t): generator output and generation-type groups.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="390" x="47" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs_row_2" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Line-flow observations&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;f&lt;sub&gt;l&lt;/sub&gt;(t), |f&lt;sub&gt;l&lt;/sub&gt;(t)|: signed and absolute transmission flow.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="390" x="47" y="304" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs_row_3" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Topology descriptors&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Line endpoints, A&lt;sub&gt;L&lt;/sub&gt;, c&lt;sub&gt;l&lt;/sub&gt;, degree, centrality, and adjacent-line structure.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="68" width="390" x="47" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_inputs_row_4" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Coordinate metadata&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Longitude/latitude are metadata only and excluded from trainable features.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="48" width="390" x="47" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EAEA;strokeColor=#C99090;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="" vertex="1">
+          <mxGeometry height="335" width="397" x="40" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets_header" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EAEA;strokeColor=#C99090;strokeWidth=2;fontFamily=Times New Roman;fontSize=18;arcSize=8;shadow=0;fontStyle=1;" value="&lt;b&gt;Target Variables&lt;/b&gt;" vertex="1">
+          <mxGeometry height="46" width="398" x="40" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets_row_0" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Forecast horizons&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;h ∈ {1, 6, 24} hours where computationally available.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="48" width="390" x="44" y="578" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets_row_1" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Continuous flow target&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Future line flow y&lt;sup&gt;(h)&lt;/sup&gt;&lt;sub&gt;l&lt;/sub&gt;(t)=f&lt;sub&gt;l&lt;/sub&gt;(t+h).&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="390" x="44" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets_row_2" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Binary risk target&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;1[|y&lt;sup&gt;(h)&lt;/sup&gt;&lt;sub&gt;l&lt;/sub&gt;(t)| ≥ q&lt;sup&gt;.95&lt;/sup&gt;&lt;sub&gt;l,train&lt;/sub&gt;].&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="390" x="44" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets_row_3" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Ordinal risk class&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Normal / Warning / Critical using training-only quantiles.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="54" width="390" x="44" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_targets_row_4" parent="p1_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Capacity diagnostic&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;ρ&lt;sub&gt;l&lt;/sub&gt;(t)=|f&lt;sub&gt;l&lt;/sub&gt;(t)|/c&lt;sub&gt;l&lt;/sub&gt; when rating is available.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="44" width="390" x="44" y="808" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_raw" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF3F8;strokeColor=#78A8C5;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.04610123119015085;" value="&lt;b&gt;Zenodo Raw Inputs&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;europe_network.json; loads/gens/lines yearly ZIP files.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="59" width="465" x="488" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_audit" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF4EC;strokeColor=#8CB596;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.04610123119015085;" value="&lt;b&gt;Download Manifest and Data Audit&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;File-size checks, extraction log, missing values, and numeric ranges.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="63" width="464" x="488" y="204" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_match" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF4EC;strokeColor=#8CB596;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05157318741450137;" value="&lt;b&gt;Year/Suffix-Safe Matching&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Merge only load, generation, and line-flow groups with matching year/suffix.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="63" width="464" x="488" y="279" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_topology" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF4EC;strokeColor=#8CB596;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05157318741450137;" value="&lt;b&gt;Transmission Topology Extraction&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Build bus-line graph, line adjacency A&lt;sub&gt;L&lt;/sub&gt;, degree, and centrality.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="464" x="488" y="356" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_unified" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF3F8;strokeColor=#78A8C5;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.0543091655266761;" value="&lt;b&gt;Unified Long-Format Table&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Rows indexed by timestamp, year, scenario group, and line_id.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="65" width="464" x="488" y="431" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_select" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF4EC;strokeColor=#8CB596;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05704514363885135;" value="&lt;b&gt;Critical-Line Selection&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Rank by variability, high-flow magnitude, centrality, and risk events.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="464" x="488" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_split" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F1EDF7;strokeColor=#A693C6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05704514363885135;" value="&lt;b&gt;Chronological Split Assignment&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Train → validation → test → external-test without random shuffling.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="464" x="488" y="592" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_features" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05704514363885135;" value="&lt;b&gt;Feature Engineering&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Temporal, aggregate, graph-neighborhood, memory, and regime features.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="464" x="488" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_labels" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EAEA;strokeColor=#C99090;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.059781121751026615;" value="&lt;b&gt;Risk Labels and Forecast Targets&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Training-only line thresholds and future-flow horizons.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="464" x="488" y="728" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_scale" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F1EDF7;strokeColor=#A693C6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.059781121751026615;" value="&lt;b&gt;Train-Only Scaling and Matrices&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Create X&lt;sub&gt;train&lt;/sub&gt;, X&lt;sub&gt;val&lt;/sub&gt;, X&lt;sub&gt;test&lt;/sub&gt;, X&lt;sub&gt;external&lt;/sub&gt;; no coordinate leakage.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="464" x="488" y="796" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_artifacts" parent="p1_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#E8F4F3;strokeColor=#7BB8B6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.06251709986320188;" value="&lt;b&gt;Reusable Data Preparation Artifacts&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Unified Parquet data, feature dictionary, line metadata, and graph matrices.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="56" width="464" x="488" y="864" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e5" edge="1" parent="p1_1" source="p1_raw" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#78A8C5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_audit" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e6" edge="1" parent="p1_1" source="p1_audit" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#8CB596;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_match" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e7" edge="1" parent="p1_1" source="p1_match" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#8CB596;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_topology" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e8" edge="1" parent="p1_1" source="p1_topology" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#8CB596;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_unified" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e9" edge="1" parent="p1_1" source="p1_unified" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#78A8C5;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_select" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="703" y="504" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1_e10" edge="1" parent="p1_1" source="p1_select" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#8CB596;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_split" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e11" edge="1" parent="p1_1" source="p1_split" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_features" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e12" edge="1" parent="p1_1" source="p1_features" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_labels" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e13" edge="1" parent="p1_1" source="p1_labels" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#C99090;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_scale" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e14" edge="1" parent="p1_1" source="p1_scale" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="p1_artifacts" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e15" edge="1" parent="p1_1" source="p1_inputs" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#78A8C5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_unified" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e16" edge="1" parent="p1_1" source="p1_targets" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#C99090;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_labels" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_rules" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Feature Engineering Rules&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Derived features are computed from core observations using training-safe statistics. Lags, rolling windows, quantiles, and regimes are engineered variables.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="504" x="1014" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_temporal" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Temporal Encoding&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;hour/day-of-week indices&lt;br&gt;sin-cos cyclic encodings&lt;/span&gt;" vertex="1">
+          <mxGeometry height="86" width="216" x="1018" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_aggregates" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Load and Generation Aggregates&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;total, mean, std, min, max&lt;br&gt;ramp ΔP(t)=P(t)−P(t−1)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="84" width="226" x="1296" y="244" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_memory" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Line-Flow Memory&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;lags k∈{1,6,24}&lt;br&gt;rolling statistics over 6h and 24h&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="218" x="1018" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_quantiles" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Training-Only Quantiles&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;q&lt;sup&gt;.90&lt;/sup&gt;&lt;sub&gt;l,train&lt;/sub&gt;, q&lt;sup&gt;.95&lt;/sup&gt;&lt;sub&gt;l,train&lt;/sub&gt;, q&lt;sup&gt;.99&lt;/sup&gt;&lt;sub&gt;l,train&lt;/sub&gt;&lt;br&gt;risk proximity |f|/q&lt;sup&gt;.95&lt;/sup&gt;&lt;sub&gt;train&lt;/sub&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="230" x="1294" y="371" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_graph" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Graph-Neighborhood Features&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;adjacent-line mean/max flow&lt;br&gt;graph-smoothed flow and risk count&lt;/span&gt;" vertex="1">
+          <mxGeometry height="112" width="218" x="1018" y="502" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_fe_regime" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Operating-Regime Indicators&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;high load, high generation, high ramp,&lt;br&gt;low margin, stress regime&lt;/span&gt;" vertex="1">
+          <mxGeometry height="112" width="228" x="1296" y="502" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e18" edge="1" parent="p1_1" source="p1_features" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_rules" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e19" edge="1" parent="p1_1" source="p1_fe_rules" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_temporal" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e20" edge="1" parent="p1_1" source="p1_fe_rules" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_aggregates" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e21" edge="1" parent="p1_1" source="p1_fe_temporal" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_memory" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e22" edge="1" parent="p1_1" source="p1_fe_aggregates" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_quantiles" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e23" edge="1" parent="p1_1" source="p1_fe_memory" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_graph" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e24" edge="1" parent="p1_1" source="p1_fe_quantiles" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_fe_regime" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_normalization" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F1EDF7;strokeColor=#A693C6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Normalization and Scaling&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;x&lt;sub&gt;scaled&lt;/sub&gt;=(x−μ&lt;sub&gt;train&lt;/sub&gt;)/σ&lt;sub&gt;train&lt;/sub&gt;. Scaling is fitted on training rows and reused unchanged for validation, test, and external-test rows.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="96" width="464" x="488" y="945" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_model_ready" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#E8F4F3;strokeColor=#7BB8B6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Model-Ready Outputs before Training&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;X matrices, y&lt;sup&gt;flow&lt;/sup&gt;&lt;sub&gt;h&lt;/sub&gt;, y&lt;sup&gt;risk&lt;/sup&gt;&lt;sub&gt;h&lt;/sub&gt;, selected-line metadata, graph matrices, feature dictionary, risk-label definition, split summaries, and unified Parquet datasets.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="96" width="512" x="1018" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_boundary" parent="p1_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F3F5F6;strokeColor=#AAB1B8;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Pre-Modeling Boundary&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;The diagram stops at saved model-ready data. Model training, ablation, validation, and final evaluation are downstream steps.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="90" width="464" x="488" y="1066" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e25" edge="1" parent="p1_1" source="p1_scale" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_normalization" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="488" y="823" />
+              <mxPoint x="456" y="823" />
+              <mxPoint x="456" y="993" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1_e26" edge="1" parent="p1_1" source="p1_artifacts" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_model_ready" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="989" y="892" />
+              <mxPoint x="989" y="756" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p1_e27" edge="1" parent="p1_1" source="p1_fe_graph" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.213;entryY=0.008;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;entryPerimeter=0;" target="p1_model_ready" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e28" edge="1" parent="p1_1" source="p1_fe_regime" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.766;entryY=-0.009;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;entryPerimeter=0;" target="p1_model_ready" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e29" edge="1" parent="p1_1" source="p1_normalization" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;" target="p1_boundary" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1_e30" edge="1" parent="p1_1" source="p1_model_ready" style="endArrow=block;html=1;rounded=0;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="p1_boundary" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1316" y="1111" />
+            </Array>
+            <mxPoint x="918" y="1111" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Page 2 - B-TGPRF Internal Architecture" id="p2_diagram">
+    <mxGraphModel dx="2231" dy="1603" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="2100" pageHeight="1050" math="1" shadow="0">
+      <root>
+        <mxCell id="p2_0" />
+        <mxCell id="p2_1" parent="p2_0" />
+        <mxCell id="p2_v3" parent="p2_1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=22;fontStyle=1;" value="B-TGPRF Internal Architecture" vertex="1">
+          <mxGeometry height="34" width="1550" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_v4" parent="p2_1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Times New Roman;fontSize=18;fontStyle=1;" value="Component view of the Bayesian Temporal Graph Probabilistic Risk Forecaster" vertex="1">
+          <mxGeometry height="34" width="1518" x="70" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_inputs" parent="p2_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF3F8;strokeColor=#78A8C5;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="" vertex="1">
+          <mxGeometry height="440" width="360" x="65" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_inputs_header" parent="p2_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF3F8;strokeColor=#78A8C5;strokeWidth=2;fontFamily=Times New Roman;fontSize=18;arcSize=8;shadow=0;fontStyle=1;" value="&lt;b&gt;Model Inputs&lt;/b&gt;" vertex="1">
+          <mxGeometry height="46" width="360" x="65" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_inputs_row_0" parent="p2_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Temporal state&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;24-hour line-flow, load, generation, lag, and rolling-feature window.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="92.5" width="320" x="85" y="208" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_inputs_row_1" parent="p2_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Graph-topology state&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Line adjacency, neighboring-line statistics, degree, centrality, and rating features.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="92.5" width="320" x="85" y="300.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_inputs_row_2" parent="p2_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Operating regime&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;High-load, high-generation, high-ramp, low-margin, and stress indicators.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="92.5" width="320" x="85" y="393" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_inputs_row_3" parent="p2_1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontFamily=Times New Roman;fontSize=16;spacingLeft=12;spacingRight=12;spacingTop=6;spacingBottom=6;" value="&lt;b&gt;Forecast horizon&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;1h, 6h, and 24h horizon setting with training-only risk thresholds.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="92.5" width="320" x="85" y="485.5" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_temporal" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF4EC;strokeColor=#8CB596;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05061728395061778;" value="&lt;b&gt;Temporal Encoder&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Compresses recent load,&lt;br&gt;generation, and line-flow dynamics&lt;br&gt;into temporal representation z&lt;sub&gt;T&lt;/sub&gt;.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="270" x="470" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_graph" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#EAF4EC;strokeColor=#8CB596;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05596107055961064;" value="&lt;b&gt;Graph-Topology Encoder&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Combines adjacent-line flows,&lt;br&gt;degree, centrality, and rating features&lt;br&gt;into graph representation z&lt;sub&gt;G&lt;/sub&gt;.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="274" x="470" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_regime" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05535499398315276;" value="&lt;b&gt;Regime Encoder&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Represents operating stress&lt;br&gt;and high-ramp conditions&lt;br&gt;as regime representation z&lt;sub&gt;R&lt;/sub&gt;.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="277" x="470" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_fusion" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#E8F4F3;strokeColor=#7BB8B6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.04444444444444596;" value="&lt;b&gt;Graph-Temporal Fusion&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Forms joint model state:&lt;br&gt;z = [z&lt;sub&gt;T&lt;/sub&gt;, z&lt;sub&gt;G&lt;/sub&gt;, z&lt;sub&gt;R&lt;/sub&gt;, h].&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="225" x="802" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_forecast" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#E8F4F3;strokeColor=#7BB8B6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.06140350877193083;" value="&lt;b&gt;Point Forecast Backbone&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Validation-selected forecasting core&lt;br&gt;predicts future line flow.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="228" x="1067" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_residual" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05409356725146166;" value="&lt;b&gt;Residual Correction&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Corrects near-threshold and&lt;br&gt;high-risk forecast errors.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="228" x="1067" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_interval" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F8EFE3;strokeColor=#CFA36A;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.05309734513274638;" value="&lt;b&gt;Conformal Interval Layer&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Uses validation residuals to produce&lt;br&gt;lower and upper forecast bounds.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="226" x="1069" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_risk" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F1EDF7;strokeColor=#A693C6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.06666666666666832;" value="&lt;b&gt;Bayesian Risk Layer&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Transforms graph-temporal evidence into&lt;br&gt;posterior overload-risk probability.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="230" x="1335" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_calib" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#F1EDF7;strokeColor=#A693C6;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.06666666666666832;" value="&lt;b&gt;Calibration and Decision&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Calibrates probability on validation data&lt;br&gt;and assigns Normal / Warning / Critical.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="230" x="1335" y="313" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_unc" parent="p2_1" style="shape=process;rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#FFF5D9;strokeColor=#C9A84E;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;size=0.06666666666666832;" value="&lt;b&gt;Uncertainty Layer&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;Combines interval width, posterior entropy,&lt;br&gt;and near-threshold proximity.&lt;/span&gt;" vertex="1">
+          <mxGeometry height="125" width="230" x="1335" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_outputs" parent="p2_1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=10;fillColor=#FFF5D9;strokeColor=#C9A84E;strokeWidth=2;fontFamily=Times New Roman;fontSize=16;arcSize=8;shadow=0;" value="&lt;b&gt;Model Outputs&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:16px&quot;&gt;&lt;b&gt;Forecast:&lt;/b&gt; point and median line-flow prediction&lt;br&gt;&lt;b&gt;Interval:&lt;/b&gt; lower and upper probabilistic forecast bounds&lt;br&gt;&lt;b&gt;Risk:&lt;/b&gt; posterior and calibrated overload-risk probability&lt;br&gt;&lt;b&gt;Class:&lt;/b&gt; Normal / Warning / Critical decision&lt;br&gt;&lt;b&gt;Uncertainty:&lt;/b&gt; diagnostic uncertainty score&lt;/span&gt;" vertex="1">
+          <mxGeometry height="137" width="509" x="1069" y="657" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e5" edge="1" parent="p2_1" source="p2_inputs" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#78A8C5;exitX=1;exitY=0.23;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_temporal" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e6" edge="1" parent="p2_1" source="p2_inputs" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#78A8C5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_graph" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e7" edge="1" parent="p2_1" source="p2_inputs" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#78A8C5;exitX=1;exitY=0.77;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_regime" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e8" edge="1" parent="p2_1" source="p2_temporal" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#8CB596;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.35;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_fusion" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e9" edge="1" parent="p2_1" source="p2_graph" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#8CB596;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_fusion" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e10" edge="1" parent="p2_1" source="p2_regime" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.65;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_fusion" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e11" edge="1" parent="p2_1" source="p2_fusion" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_forecast" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e12" edge="1" parent="p2_1" source="p2_fusion" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_residual" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e13" edge="1" parent="p2_1" source="p2_fusion" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#7BB8B6;exitX=1;exitY=0.65;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_interval" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e14" edge="1" parent="p2_1" source="p2_forecast" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_residual" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e15" edge="1" parent="p2_1" source="p2_residual" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_interval" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e16" edge="1" parent="p2_1" source="p2_residual" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_risk" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e17" edge="1" parent="p2_1" source="p2_risk" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_calib" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e18" edge="1" parent="p2_1" source="p2_calib" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#A693C6;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_unc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e19" edge="1" parent="p2_1" source="p2_interval" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#C9A84E;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_unc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e20" edge="1" parent="p2_1" source="p2_interval" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#CFA36A;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_outputs" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2_e21" edge="1" parent="p2_1" source="p2_unc" style="endArrow=block;html=1;rounded=1;orthogonal=1;orthogonalLoop=1;jettySize=auto;strokeWidth=3;strokeColor=#C9A84E;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="p2_outputs" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

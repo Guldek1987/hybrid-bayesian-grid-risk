@@ -1,0 +1,5 @@
+source_url,local_path,file_size_bytes,download_status,timestamp_utc
+https://zenodo.org/records/13378476/files/europe_network.json?download=1,Data/Raw/europe_network.json,4331482,exists,2026-05-20T18:59:08.945215+00:00
+https://zenodo.org/records/13378476/files/loads_2020.zip?download=1,Data/Raw/loads_2020.zip,1280351867,exists,2026-05-20T18:59:08.945418+00:00
+https://zenodo.org/records/13378476/files/gens_2020.zip?download=1,Data/Raw/gens_2020.zip,125820756,exists,2026-05-20T18:59:08.945567+00:00
+https://zenodo.org/records/13378476/files/lines_2020.zip?download=1,Data/Raw/lines_2020.zip,2145457640,exists,2026-05-20T18:59:08.945773+00:00
